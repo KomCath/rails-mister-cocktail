@@ -1,0 +1,9 @@
+<h1>Let's add some stuff to our cocktail!</h1>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient %>
+  <%= f.input :cocktail_id, :as => :hidden, :input_html => { :value => @cocktail.id } %>
+  <%= f.input :description %>
+  <%= f.submit %>
+<% end %>
+
+<p>🤙<%= link_to 'Back your cocktail', cocktails_path %></p>

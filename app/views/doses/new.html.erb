@@ -1,8 +1,8 @@
 <h1>Let's add some stuff to our cocktail!</h1>
 <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.association :ingredient %>
+  <%= f.input :description, placeholder: 'shot, oz, drop' %>
   <%= f.input :cocktail_id, :as => :hidden, :input_html => { :value => @cocktail.id } %>
-  <%= f.input :description %>
+  <%= f.association :ingredient %>
   <%= f.submit %>
 <% end %>
 
